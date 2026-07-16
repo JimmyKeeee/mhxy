@@ -1,0 +1,624 @@
+{
+    "$__mpe_config_fuben": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": 120,
+                "y": -252,
+                "zoom": 0.2
+            },
+            "filename": "fuben",
+            "version": "v1.7.4"
+        }
+    },
+    "3副本开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    317,
+                    16,
+                    73,
+                    64
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "timeout": 1000,
+        "next": [
+            "普通副本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 700,
+                "y": 2387
+            }
+        }
+    },
+    "普通副本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "普通"
+                ]
+            }
+        },
+        "repeat": 1,
+        "post_delay": 5000,
+        "next": [
+            "普通副本参与"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1020,
+                "y": 2404
+            }
+        }
+    },
+    "普通副本参与": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "普通副本",
+                "roi_offset": [
+                    206,
+                    27,
+                    -81,
+                    0
+                ],
+                "expected": [
+                    "参加"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "post_delay": 1000,
+        "next": [
+            "选择副本_副本29_副本37"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1280,
+                "y": 2388
+            }
+        }
+    },
+    "选择副本_副本29_副本37": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "选择副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入1_副本30_副本38"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1660,
+                "y": 2419
+            }
+        }
+    },
+    "进入1_副本30_副本38": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入"
+                ],
+                "index": 2
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "任务阶段_副本42"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1980,
+                "y": 2403
+            }
+        }
+    },
+    "点击普通栏_副本31_副本39": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "任务阶段_副本42"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2620,
+                "y": 2445
+            }
+        }
+    },
+    "战斗_副本32_副本40": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1213,
+                    188,
+                    67,
+                    78
+                ],
+                "expected": [
+                    "战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "进入战斗_副本33_副本41"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2649,
+                "y": 2814
+            }
+        }
+    },
+    "进入战斗_副本33_副本41": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    995,
+                    450,
+                    160,
+                    35
+                ],
+                "lower": [
+                    [
+                        242,
+                        216,
+                        184
+                    ]
+                ],
+                "upper": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 2,
+        "post_delay": 10000,
+        "next": [
+            "任务阶段_副本42"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2040,
+                "y": 2757
+            }
+        }
+    },
+    "任务阶段_副本42": {
+        "next": [
+            "点击普通栏_副本31_副本39",
+            "战斗_副本32_副本40",
+            "任务结束_副本43",
+            "等待战斗结束_副本45"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2300,
+                "y": 2482
+            }
+        }
+    },
+    "任务结束_副本43": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "副本已完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "停止任务_副本44"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2595,
+                "y": 3133
+            }
+        }
+    },
+    "停止任务_副本44": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2869,
+                "y": 3180
+            }
+        }
+    },
+    "等待战斗结束_副本45": {
+        "post_delay": 1000,
+        "next": [
+            "任务阶段_副本42"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2571,
+                "y": 3419
+            }
+        }
+    },
+    "师门开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    244,
+                    5,
+                    200,
+                    100
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "timeout": 1000,
+        "next": [
+            "师门"
+        ],
+        "on_error": [
+            "识别界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 353
+            }
+        }
+    },
+    "师门": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "师门任务"
+                ]
+            }
+        },
+        "repeat": 1,
+        "post_delay": 5000,
+        "next": [
+            "师门任务的参与"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 382
+            }
+        }
+    },
+    "识别界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "x2.png",
+                    "x.png",
+                    "x3.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "师门开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 449
+            }
+        }
+    },
+    "去完成": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    391,
+                    416,
+                    650,
+                    40
+                ],
+                "expected": [
+                    "去完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 0,
+        "next": [
+            "等待师门完成并确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 381
+            }
+        }
+    },
+    "等待师门完成并确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    577,
+                    535,
+                    127,
+                    44
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 30000,
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 399
+            }
+        }
+    },
+    "师门任务的参与": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "师门",
+                "roi_offset": [
+                    213,
+                    16,
+                    -48,
+                    17
+                ],
+                "expected": [
+                    "参加"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "去完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 393
+            }
+        }
+    },
+    "打图开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    244,
+                    5,
+                    200,
+                    100
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "timeout": 1000,
+        "next": [
+            "宝图"
+        ],
+        "on_error": [
+            "[JumpBack]识别界面_副本14"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 812,
+                "y": 12
+            }
+        }
+    },
+    "宝图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "宝图任务"
+                ]
+            }
+        },
+        "repeat": 1,
+        "post_delay": 5000,
+        "next": [
+            "宝图参与"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1132,
+                "y": 41
+            }
+        }
+    },
+    "识别界面_副本14": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "x2.png",
+                    "x.png",
+                    "x3.png",
+                    "queding.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "打图开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 492,
+                "y": 108
+            }
+        }
+    },
+    "宝图参与": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "宝图",
+                "roi_offset": [
+                    213,
+                    16,
+                    -48,
+                    17
+                ],
+                "expected": [
+                    "参加"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "宝图参与_听听无妨"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1452,
+                "y": 52
+            }
+        }
+    },
+    "宝图参与_听听无妨": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "听听无妨"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1772,
+                "y": 102
+            }
+        }
+    },
+    "进入2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入"
+                ],
+                "index": 1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
+            }
+        }
+    },
+    "进入3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入"
+                ],
+                "index": 3
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 252,
+                "y": 12
+            }
+        }
+    }
+}
