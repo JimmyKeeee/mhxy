@@ -60,50 +60,73 @@
     // },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
-        },
-        {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
-        },
-        {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
-        },
-        {
-            "name": "带Custom的任务",
-            "entry": "MyTask4"
-        }
-    ],
-    "option": {
-        "任务选项1": {
-            "type": "select",
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
+            "name": "普通副本1",
+            "entry": "3副本开始",
+            "pipeline_override": {
+                "进入普通副本": {
+                    "recognition": {
+                        "param": {
+                            "index": 0
                         }
                     }
                 }
-            ]
+            }
+        },
+        {
+            "name": "普通副本2",
+            "entry": "3副本开始",
+            "pipeline_override": {
+                "进入普通副本": {
+                    "recognition": {
+                        "param": {
+                            "index": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "普通副本3",
+            "entry": "3副本开始",
+            "pipeline_override": {
+                "进入普通副本": {
+                    "recognition": {
+                        "param": {
+                            "index": 2
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "侠士副本1",
+            "entry": "侠士副本开始",
+            "pipeline_override": {
+                "进入侠士副本": {
+                    "recognition": {
+                        "param": {
+                            "index": 0
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "侠士副本2",
+            "entry": "侠士副本开始",
+            "pipeline_override": {
+                "进入侠士副本": {
+                    "recognition": {
+                        "param": {
+                            "index": 1
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "抓鬼",
+            "entry": "抓鬼任务"
         }
-    }
+    ]
 }
