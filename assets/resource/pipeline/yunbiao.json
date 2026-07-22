@@ -1,0 +1,397 @@
+{
+    "$__mpe_config_yunbiao": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -947,
+                "y": -248,
+                "zoom": 0.75
+            },
+            "filename": "yunbiao",
+            "version": "v1.7.4"
+        }
+    },
+    "参加运镖": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "找到运镖节点",
+                "roi_offset": [
+                    204,
+                    22,
+                    14,
+                    12
+                ],
+                "expected": [
+                    "参加"
+                ],
+                "index": 0
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 6000,
+        "next": [
+            "押送普通镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2102,
+                "y": 469
+            }
+        }
+    },
+    "打开梦幻": {
+        "next": [
+            "梦幻西游点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1331,
+                "y": 259
+            }
+        }
+    },
+    "找到运镖节点": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "运镖"
+                ]
+            }
+        },
+        "next": [
+            "参加运镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1842,
+                "y": 469
+            }
+        }
+    },
+    "押送普通镖": {
+        "max_hit": 3,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    927,
+                    302,
+                    314,
+                    197
+                ],
+                "expected": [
+                    "押送普通"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "确定押镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2382,
+                "y": 513
+            }
+        }
+    },
+    "押镖中": {
+        "post_delay": 1000,
+        "next": [
+            "等待押镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3203,
+                "y": 808
+            }
+        }
+    },
+    "押镖结束": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3484,
+                "y": 523
+            }
+        }
+    },
+    "梦幻西游点击": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "梦幻西游"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 10000,
+        "next": [
+            "点击跳过",
+            "等待"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1586,
+                "y": 144
+            }
+        }
+    },
+    "点击登录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "登录"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "登录失败",
+            "登陆成功"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2195,
+                "y": 81
+            }
+        }
+    },
+    "点击跳过": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    539,
+                    313,
+                    155,
+                    78
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击登录"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1873,
+                "y": 87
+            }
+        }
+    },
+    "点开活动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    301,
+                    43,
+                    72,
+                    68
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "找到运镖节点"
+        ],
+        "on_error": [
+            "退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1591,
+                "y": 476
+            }
+        }
+    },
+    "登录": {
+        "next": [
+            "梦幻西游点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2133,
+                "y": 322
+            }
+        }
+    },
+    "登录失败": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "登录"
+                ]
+            }
+        },
+        "post_delay": 500,
+        "next": [
+            "点击登录"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2589,
+                "y": -37
+            }
+        }
+    },
+    "登陆成功": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "任务"
+                ]
+            }
+        },
+        "next": [
+            "结束登录"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2587,
+                "y": 214
+            }
+        }
+    },
+    "确定押镖": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "等待押镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2634,
+                "y": 513
+            }
+        }
+    },
+    "第一次押镖结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "押送普通镖",
+            "押镖结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3200,
+                "y": 518
+            }
+        }
+    },
+    "等待": {
+        "next": [
+            "登录"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1899,
+                "y": 312
+            }
+        }
+    },
+    "等待押镖": {
+        "post_delay": 0,
+        "next": [
+            "第一次押镖结束",
+            "押镖中"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2926,
+                "y": 513
+            }
+        }
+    },
+    "结束登录": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2873,
+                "y": 246
+            }
+        }
+    },
+    "运镖任务": {
+        "next": [
+            "点开活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1322,
+                "y": 469
+            }
+        }
+    },
+    "退出": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "x.png",
+                    "x2.png",
+                    "x3.png",
+                    "x4.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点开活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1909,
+                "y": 800
+            }
+        }
+    }
+}
