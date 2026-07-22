@@ -3,633 +3,19 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784755253184,
+            "isModifiedExternally": false,
+            "filePath": "E:\\mhxy\\maa_mhxy\\assets\\resource\\pipeline\\fuben.json",
             "savedViewport": {
-                "x": 275,
-                "y": 155,
-                "zoom": 0.46
+                "x": 201,
+                "y": 183,
+                "zoom": 0.49
             },
             "filename": "fuben",
             "version": "v1.7.4"
         }
     },
-    "战斗二次确认": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "战.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 4000,
-        "next": [
-            "进入战斗_副本33_副本41_副本57_副本1"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 2411
-            }
-        }
-    },
-    "进入战斗_副本33_副本41_副本57_副本1": {
-        "recognition": {
-            "type": "ColorMatch",
-            "param": {
-                "roi": [
-                    995,
-                    450,
-                    160,
-                    35
-                ],
-                "lower": [
-                    [
-                        242,
-                        216,
-                        184
-                    ]
-                ],
-                "upper": [
-                    255,
-                    255,
-                    255
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 10000,
-        "next": [
-            "任务阶段_副本42_副本58"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 2396
-            }
-        }
-    },
-    "抓鬼任务": {
-        "next": [
-            "活动界面"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 12,
-                "y": 1536
-            }
-        }
-    },
-    "活动界面": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    322,
-                    10,
-                    67,
-                    66
-                ],
-                "expected": [
-                    "活动"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1000,
-        "next": [
-            "捉鬼任务识别"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 332,
-                "y": 1475
-            }
-        }
-    },
-    "捉鬼任务识别": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "捉鬼任务"
-                ]
-            }
-        },
-        "next": [
-            "捉鬼任务参加"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 652,
-                "y": 1520
-            }
-        }
-    },
-    "捉鬼任务参加": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": "捉鬼任务识别",
-                "roi_offset": [
-                    207,
-                    26,
-                    -37,
-                    4
-                ],
-                "expected": [
-                    "参加"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "捉鬼任务接取"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 972,
-                "y": 1487
-            }
-        }
-    },
-    "捉鬼任务接取": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1010,
-                    178,
-                    146,
-                    38
-                ],
-                "expected": [
-                    "捉鬼任务"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "抓鬼循环"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1292,
-                "y": 1503
-            }
-        }
-    },
-    "抓鬼循环": {
-        "next": [
-            "再抓一轮",
-            "开始抓鬼",
-            "等待抓鬼结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1612,
-                "y": 1526
-            }
-        }
-    },
-    "开始抓鬼": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1232,
-                    226,
-                    46,
-                    39
-                ],
-                "template": [
-                    "战.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "repeat": 2,
-        "post_delay": 1000,
-        "next": [
-            "抓鬼循环"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1932,
-                "y": 1765
-            }
-        }
-    },
-    "再抓一轮": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    705,
-                    400,
-                    81,
-                    35
-                ],
-                "expected": [
-                    "确定"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1000,
-        "next": [
-            "捉鬼任务接取_第二轮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1932,
-                "y": 1420
-            }
-        }
-    },
-    "捉鬼任务接取_第二轮": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1010,
-                    178,
-                    146,
-                    38
-                ],
-                "expected": [
-                    "捉鬼任务"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "抓鬼循环_第二轮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 1448
-            }
-        }
-    },
-    "抓鬼循环_第二轮": {
-        "next": [
-            "抓鬼结束确认",
-            "开始抓鬼_第二轮",
-            "等待抓鬼结束_第二轮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2572,
-                "y": 1431
-            }
-        }
-    },
-    "开始抓鬼_第二轮": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    1232,
-                    226,
-                    46,
-                    39
-                ],
-                "template": [
-                    "战.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "repeat": 2,
-        "post_delay": 5000,
-        "next": [
-            "抓鬼循环_第二轮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 1036
-            }
-        }
-    },
-    "抓鬼结束确认": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    471,
-                    383,
-                    322,
-                    54
-                ],
-                "expected": [
-                    "取消"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 500,
-        "next": [
-            "停止抓鬼任务"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 1102
-            }
-        }
-    },
-    "停止抓鬼任务": {
-        "action": {
-            "type": "StopTask"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3212,
-                "y": 1181
-            }
-        }
-    },
-    "等待抓鬼结束_第二轮": {
-        "post_delay": 5000,
-        "next": [
-            "抓鬼循环_第二轮"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 1447
-            }
-        }
-    },
-    "等待抓鬼结束": {
-        "post_delay": 5000,
-        "next": [
-            "抓鬼循环"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1932,
-                "y": 2177
-            }
-        }
-    },
-    "3副本开始": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    317,
-                    16,
-                    73,
-                    64
-                ],
-                "expected": [
-                    "活动"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 2000,
-        "timeout": 1000,
-        "next": [
-            "普通副本"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3372,
-                "y": 324
-            }
-        }
-    },
-    "普通副本": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "普通"
-                ]
-            }
-        },
-        "repeat": 1,
-        "post_delay": 5000,
-        "next": [
-            "普通副本参与"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3692,
-                "y": 341
-            }
-        }
-    },
-    "普通副本参与": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": "普通副本",
-                "roi_offset": [
-                    206,
-                    27,
-                    -81,
-                    0
-                ],
-                "expected": [
-                    "参加"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "repeat": 2,
-        "post_delay": 1000,
-        "next": [
-            "选择副本_副本29_副本37"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4012,
-                "y": 308
-            }
-        }
-    },
-    "选择副本_副本29_副本37": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "选择副本"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1000,
-        "next": [
-            "进入普通副本"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4332,
-                "y": 349
-            }
-        }
-    },
-    "进入普通副本": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "进入"
-                ],
-                "index": 0
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "next": [
-            "任务阶段_副本42"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4652,
-                "y": 340
-            }
-        }
-    },
-    "点击普通栏_副本31_副本39": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "跳过"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 500,
-        "next": [
-            "任务阶段_副本42"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4652,
-                "y": 12
-            }
-        }
-    },
-    "战斗_副本32_副本40": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1213,
-                    188,
-                    67,
-                    78
-                ],
-                "expected": [
-                    "战"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "next": [
-            "进入战斗_副本33_副本41"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5292,
-                "y": 438
-            }
-        }
-    },
-    "进入战斗_副本33_副本41": {
-        "recognition": {
-            "type": "ColorMatch",
-            "param": {
-                "roi": [
-                    995,
-                    450,
-                    160,
-                    35
-                ],
-                "lower": [
-                    [
-                        242,
-                        216,
-                        184
-                    ]
-                ],
-                "upper": [
-                    255,
-                    255,
-                    255
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 10000,
-        "next": [
-            "任务阶段_副本42"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 5612,
-                "y": 323
-            }
-        }
-    },
-    "任务阶段_副本42": {
-        "next": [
-            "点击普通栏_副本31_副本39",
-            "战斗_副本32_副本40",
-            "任务结束_副本43",
-            "等待战斗结束_副本45"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 4972,
-                "y": 334
-            }
-        }
-    },
-    "任务结束_副本43": {
+    "任务结束_侠": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -643,35 +29,66 @@
         },
         "post_delay": 500,
         "next": [
-            "停止任务_副本44"
+            "停止任务_侠"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5292,
-                "y": 783
+                "x": 2892,
+                "y": 1616
             }
         }
     },
-    "停止任务_副本44": {
-        "action": {
-            "type": "StopTask"
+    "任务结束_普": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "副本已完成"
+                ]
+            }
         },
-        "$__mpe_code": {
-            "position": {
-                "x": 5612,
-                "y": 846
-            }
-        }
-    },
-    "等待战斗结束_副本45": {
-        "post_delay": 1000,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
         "next": [
-            "任务阶段_副本42"
+            "停止任务_普"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 5292,
-                "y": 218
+                "x": 2572,
+                "y": 605
+            }
+        }
+    },
+    "任务阶段_侠": {
+        "next": [
+            "点击普通栏_侠",
+            "战斗_侠",
+            "战斗二次确认",
+            "跳过剧情_侠士",
+            "任务结束_侠",
+            "等待战斗结束_侠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 1895
+            }
+        }
+    },
+    "任务阶段_普": {
+        "next": [
+            "点击普通栏_普",
+            "战斗_普",
+            "跳过剧情",
+            "任务结束_普",
+            "等待战斗结束_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 891
             }
         }
     },
@@ -701,30 +118,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 972,
-                "y": 3100
-            }
-        }
-    },
-    "选择副本_副本29_副本37_副本49": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "选择副本"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 1000,
-        "next": [
-            "点击侠士副本"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1612,
-                "y": 3125
+                "y": 1815
             }
         }
     },
@@ -735,7 +129,58 @@
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 3177
+                "y": 2153
+            }
+        }
+    },
+    "停止任务_侠": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3212,
+                "y": 1678
+            }
+        }
+    },
+    "停止任务_普": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2892,
+                "y": 668
+            }
+        }
+    },
+    "去完成": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    391,
+                    416,
+                    650,
+                    40
+                ],
+                "expected": [
+                    "去完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 0,
+        "next": [
+            "等待师门完成并确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2652,
+                "y": 12
             }
         }
     },
@@ -761,7 +206,33 @@
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 3132
+                "y": 1847
+            }
+        }
+    },
+    "回到长安城_普": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    14,
+                    13,
+                    57,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 600,
+        "next": [
+            "回到长安城_长安城_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 322,
+                "y": 1540
             }
         }
     },
@@ -787,7 +258,102 @@
         "$__mpe_code": {
             "position": {
                 "x": 652,
-                "y": 3132
+                "y": 1847
+            }
+        }
+    },
+    "回到长安城_长安城_普": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    586,
+                    400,
+                    57,
+                    33
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 400,
+        "next": [
+            "长安城_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 642,
+                "y": 1540
+            }
+        }
+    },
+    "宝图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "宝图任务"
+                ]
+            }
+        },
+        "repeat": 1,
+        "post_delay": 5000,
+        "next": [
+            "宝图参与"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 812,
+                "y": 12
+            }
+        }
+    },
+    "宝图参与": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "宝图",
+                "roi_offset": [
+                    213,
+                    16,
+                    -48,
+                    17
+                ],
+                "expected": [
+                    "参加"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "宝图参与_听听无妨"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1132,
+                "y": 23
+            }
+        }
+    },
+    "宝图参与_听听无妨": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "听听无妨"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1452,
+                "y": 73
             }
         }
     },
@@ -811,141 +377,27 @@
         },
         "post_delay": 10000,
         "next": [
-            "选择副本_副本29_副本37_副本49"
+            "选择副本_侠"
         ],
         "$__mpe_code": {
             "position": {
                 "x": 1292,
-                "y": 3116
+                "y": 1831
             }
         }
     },
-    "点击侠士副本": {
+    "寻路百晓仙子_普": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    407,
-                    107,
-                    143,
-                    40
+                    426,
+                    362,
+                    103,
+                    32
                 ],
                 "expected": [
-                    "侠士副本"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 200,
-        "next": [
-            "进入侠士副本"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1932,
-                "y": 3116
-            }
-        }
-    },
-    "进入侠士副本": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "进入"
-                ],
-                "index": 0
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "next": [
-            "任务阶段_副本42_副本58"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 3116
-            }
-        }
-    },
-    "点击普通栏_副本31_副本39_副本55": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "跳过"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 500,
-        "next": [
-            "任务阶段_副本42_副本58"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 2788
-            }
-        }
-    },
-    "战斗_副本32_副本40_副本56": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    1224,
-                    229,
-                    54,
-                    38
-                ],
-                "expected": [
-                    "战"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 5000,
-        "next": [
-            "进入战斗_副本33_副本41_副本57"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 3482
-            }
-        }
-    },
-    "进入战斗_副本33_副本41_副本57": {
-        "recognition": {
-            "type": "ColorMatch",
-            "param": {
-                "roi": [
-                    995,
-                    450,
-                    160,
-                    35
-                ],
-                "lower": [
-                    [
-                        242,
-                        216,
-                        184
-                    ]
-                ],
-                "upper": [
-                    255,
-                    255,
-                    255
+                    "百晓仙子"
                 ]
             }
         },
@@ -954,73 +406,62 @@
         },
         "post_delay": 10000,
         "next": [
-            "任务阶段_副本42_副本58"
+            "选择副本_普"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2252,
-                "y": 3461
+                "x": 1282,
+                "y": 1524
             }
         }
     },
-    "任务阶段_副本42_副本58": {
-        "next": [
-            "点击普通栏_副本31_副本39_副本55",
-            "战斗_副本32_副本40_副本56",
-            "战斗二次确认",
-            "任务结束_副本43_副本59",
-            "等待战斗结束_副本45_副本61"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2572,
-                "y": 3116
-            }
-        }
-    },
-    "任务结束_副本43_副本59": {
+    "师门": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": [
-                    "副本已完成"
+                    "师门任务"
+                ]
+            }
+        },
+        "repeat": 1,
+        "post_delay": 5000,
+        "next": [
+            "师门任务的参与"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2012,
+                "y": 13
+            }
+        }
+    },
+    "师门任务的参与": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": "师门",
+                "roi_offset": [
+                    213,
+                    16,
+                    -48,
+                    17
+                ],
+                "expected": [
+                    "参加"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
-        "post_delay": 500,
         "next": [
-            "停止任务_副本44_副本60"
+            "去完成"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2892,
-                "y": 3154
-            }
-        }
-    },
-    "停止任务_副本44_副本60": {
-        "action": {
-            "type": "StopTask"
-        },
-        "$__mpe_code": {
-            "position": {
-                "x": 3212,
-                "y": 3216
-            }
-        }
-    },
-    "等待战斗结束_副本45_副本61": {
-        "post_delay": 1000,
-        "next": [
-            "任务阶段_副本42_副本58"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 2892,
-                "y": 2860
+                "x": 2332,
+                "y": 24
             }
         }
     },
@@ -1052,40 +493,75 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 12,
+                "x": 1692,
                 "y": 65
             }
         }
     },
-    "师门": {
+    "战斗_侠": {
         "recognition": {
             "type": "OCR",
             "param": {
+                "roi": [
+                    1224,
+                    229,
+                    54,
+                    38
+                ],
                 "expected": [
-                    "师门任务"
+                    "战"
                 ]
             }
         },
-        "repeat": 1,
+        "action": {
+            "type": "Click"
+        },
         "post_delay": 5000,
         "next": [
-            "师门任务的参与"
+            "进入战斗_侠"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 13
+                "x": 2892,
+                "y": 1167
             }
         }
     },
-    "识别界面": {
+    "战斗_普": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1213,
+                    188,
+                    67,
+                    78
+                ],
+                "expected": [
+                    "战"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "进入战斗_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 698
+            }
+        }
+    },
+    "战斗二次确认": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "x2.png",
-                    "x.png",
-                    "x3.png"
+                    "战.png"
                 ]
             }
         },
@@ -1093,100 +569,16 @@
             "type": "Click"
         },
         "next": [
-            "师门开始"
+            "进入战斗_侠2"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 356
+                "x": 1932,
+                "y": 2221
             }
         }
     },
-    "去完成": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    391,
-                    416,
-                    650,
-                    40
-                ],
-                "expected": [
-                    "去完成"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_delay": 0,
-        "next": [
-            "等待师门完成并确定"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 972,
-                "y": 12
-            }
-        }
-    },
-    "等待师门完成并确定": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    577,
-                    535,
-                    127,
-                    44
-                ],
-                "expected": [
-                    "确定"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "post_wait_freezes": 30000,
-        "$__mpe_code": {
-            "position": {
-                "x": 1292,
-                "y": 30
-            }
-        }
-    },
-    "师门任务的参与": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": "师门",
-                "roi_offset": [
-                    213,
-                    16,
-                    -48,
-                    17
-                ],
-                "expected": [
-                    "参加"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "去完成"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 652,
-                "y": 24
-            }
-        }
-    },
-    "打图开始": {
+    "宝图任务": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -1214,29 +606,170 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1532,
-                "y": 65
+                "x": 492,
+                "y": 64
             }
         }
     },
-    "宝图": {
+    "普通副本开始": {
+        "post_delay": 2000,
+        "timeout": 1000,
+        "next": [
+            "回到长安城_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 30,
+                "y": 1688
+            }
+        }
+    },
+    "点击侠士副本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    407,
+                    107,
+                    143,
+                    40
+                ],
+                "expected": [
+                    "侠士副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 200,
+        "next": [
+            "进入侠士副本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 1876
+            }
+        }
+    },
+    "点击普通栏_侠": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": [
-                    "宝图任务"
+                    "跳过"
                 ]
             }
         },
-        "repeat": 1,
-        "post_delay": 5000,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
         "next": [
-            "宝图参与"
+            "任务阶段_侠"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1852,
-                "y": 13
+                "x": 2252,
+                "y": 1548
+            }
+        }
+    },
+    "点击普通栏_普": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500,
+        "next": [
+            "任务阶段_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 1189
+            }
+        }
+    },
+    "等待师门完成并确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    577,
+                    535,
+                    127,
+                    44
+                ],
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 30000,
+        "$__mpe_code": {
+            "position": {
+                "x": 2972,
+                "y": 30
+            }
+        }
+    },
+    "等待战斗结束_侠": {
+        "post_delay": 1000,
+        "next": [
+            "任务阶段_侠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2892,
+                "y": 1944
+            }
+        }
+    },
+    "等待战斗结束_普": {
+        "post_delay": 1000,
+        "next": [
+            "任务阶段_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2602,
+                "y": 851
+            }
+        }
+    },
+    "识别界面": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "x2.png",
+                    "x.png",
+                    "x3.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "师门开始"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2012,
+                "y": 356
             }
         }
     },
@@ -1256,50 +789,148 @@
             "type": "Click"
         },
         "next": [
-            "打图开始"
+            "宝图任务"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1852,
-                "y": 356
+                "x": 812,
+                "y": 355
             }
         }
     },
-    "宝图参与": {
+    "跳过剧情": {
         "recognition": {
-            "type": "OCR",
+            "type": "TemplateMatch",
             "param": {
-                "roi": "宝图",
-                "roi_offset": [
-                    213,
-                    16,
-                    -48,
-                    17
-                ],
-                "expected": [
-                    "参加"
+                "template": [
+                    "jump.png"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "repeat": 2,
+        "post_delay": 500,
         "next": [
-            "宝图参与_听听无妨"
+            "任务阶段_普"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2172,
-                "y": 24
+                "x": 2588,
+                "y": 1068
             }
         }
     },
-    "宝图参与_听听无妨": {
+    "跳过剧情_侠士": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "jump_1.png",
+                    "jump2.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "任务阶段_侠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2890,
+                "y": 2223
+            }
+        }
+    },
+    "进入2": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": [
-                    "听听无妨"
+                    "进入"
+                ],
+                "index": 1
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
+            }
+        }
+    },
+    "进入3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入"
+                ],
+                "index": 2
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 252,
+                "y": 12
+            }
+        }
+    },
+    "进入侠士副本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入"
+                ],
+                "index": 0
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "任务阶段_侠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 1876
+            }
+        }
+    },
+    "进入战斗_侠": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    995,
+                    450,
+                    160,
+                    35
+                ],
+                "lower": [
+                    [
+                        242,
+                        216,
+                        184
+                    ]
+                ],
+                "upper": [
+                    255,
+                    255,
+                    255
                 ]
             }
         },
@@ -1308,54 +939,188 @@
         },
         "post_delay": 10000,
         "next": [
-            "打图中"
+            "任务阶段_侠"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2492,
-                "y": 28
+                "x": 2252,
+                "y": 1156
             }
         }
     },
-    "fininsh": {
+    "进入战斗_侠2": {
         "recognition": {
-            "type": "OCR",
+            "type": "ColorMatch",
             "param": {
-                "expected": [
-                    "今日已得到"
+                "roi": [
+                    995,
+                    450,
+                    160,
+                    35
+                ],
+                "lower": [
+                    [
+                        242,
+                        216,
+                        184
+                    ]
+                ],
+                "upper": [
+                    255,
+                    255,
+                    255
                 ]
             }
         },
         "action": {
-            "type": "StopTask"
+            "type": "Click"
         },
-        "$__mpe_code": {
-            "position": {
-                "x": 3132,
-                "y": 291
-            }
-        }
-    },
-    "等待打图结束": {
+        "post_delay": 10000,
         "next": [
-            "打图中"
+            "任务阶段_侠"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3132,
-                "y": 12
+                "x": 2252,
+                "y": 2206
             }
         }
     },
-    "打图中": {
+    "进入战斗_普": {
+        "recognition": {
+            "type": "ColorMatch",
+            "param": {
+                "roi": [
+                    995,
+                    450,
+                    160,
+                    35
+                ],
+                "lower": [
+                    [
+                        242,
+                        216,
+                        184
+                    ]
+                ],
+                "upper": [
+                    255,
+                    255,
+                    255
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 10000,
         "next": [
-            "等待打图结束",
-            "fininsh"
+            "任务阶段_普"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2812,
-                "y": 73
+                "x": 1932,
+                "y": 797
+            }
+        }
+    },
+    "进入普通副本": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进入"
+                ],
+                "index": 2
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "任务阶段_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 1531
+            }
+        }
+    },
+    "选择副本_侠": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "选择副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "点击侠士副本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 1830
+            }
+        }
+    },
+    "选择副本_普": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "选择副本"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "进入普通副本"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1602,
+                "y": 1523
+            }
+        }
+    },
+    "长安城_普": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    123,
+                    26,
+                    81,
+                    29
+                ],
+                "expected": [
+                    "长安城"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "timeout": 1000,
+        "next": [
+            "寻路百晓仙子_普"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 962,
+                "y": 1508
             }
         }
     }

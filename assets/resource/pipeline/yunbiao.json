@@ -3,30 +3,209 @@
         "$__mpe_code": {
             "prefix": "",
             "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1784755452431,
+            "isModifiedExternally": false,
+            "filePath": "E:\\mhxy\\maa_mhxy\\assets\\resource\\pipeline\\yunbiao.json",
             "savedViewport": {
-                "x": -947,
-                "y": -248,
-                "zoom": 0.75
+                "x": -856,
+                "y": -610,
+                "zoom": 0.65
             },
             "filename": "yunbiao",
             "version": "v1.7.4"
+        }
+    },
+    "任务抓鬼": {
+        "next": [
+            "去长安城"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 1046
+            }
+        }
+    },
+    "去长安城": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    12,
+                    10,
+                    62,
+                    67
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "飞长安城"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 1029
+            }
         }
     },
     "参加运镖": {
         "recognition": {
             "type": "OCR",
             "param": {
-                "roi": "找到运镖节点",
                 "roi_offset": [
-                    204,
-                    22,
+                    201,
+                    25,
                     14,
-                    12
+                    5
                 ],
                 "expected": [
                     "参加"
+                ]
+            }
+        },
+        "next": [
+            "押送普通镖"
+        ],
+        "on_error": [
+            "押镖结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 1368
+            }
+        }
+    },
+    "寻找钟馗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    370,
+                    397,
+                    51,
+                    31
                 ],
-                "index": 0
+                "expected": [
+                    "钟馗"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 5000,
+        "next": [
+            "捉鬼任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 1001
+            }
+        }
+    },
+    "开始抓鬼": {
+        "next": [
+            "抓鬼完成",
+            "等待抓鬼完成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 1011
+            }
+        }
+    },
+    "开始第二轮抓鬼": {
+        "next": [
+            "第二轮抓鬼完成",
+            "点击战斗副本",
+            "第二轮抓鬼中"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4231,
+                "y": 1042
+            }
+        }
+    },
+    "打开地图": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    9,
+                    7,
+                    67,
+                    73
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "进入长安城"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 1707
+            }
+        }
+    },
+    "打开梦幻": {
+        "next": [
+            "梦幻西游点击"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 512
+            }
+        }
+    },
+    "打开长安城地图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "长安城"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "找到郑镖头"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 1679
+            }
+        }
+    },
+    "找到郑镖头": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    247,
+                    414,
+                    70,
+                    22
+                ],
+                "expected": [
+                    "郑",
+                    "镖"
+                ]
             }
         },
         "action": {
@@ -38,38 +217,41 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2102,
-                "y": 469
+                "x": 1292,
+                "y": 1679
             }
         }
     },
-    "打开梦幻": {
-        "next": [
-            "梦幻西游点击"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1331,
-                "y": 259
-            }
-        }
-    },
-    "找到运镖节点": {
+    "抓鬼完成": {
         "recognition": {
             "type": "OCR",
             "param": {
                 "expected": [
-                    "运镖"
+                    "确定"
                 ]
             }
         },
+        "action": {
+            "type": "Click"
+        },
         "next": [
-            "参加运镖"
+            "第一轮结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1842,
-                "y": 469
+                "x": 2892,
+                "y": 994
+            }
+        }
+    },
+    "抓鬼结束": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 4745,
+                "y": 866
             }
         }
     },
@@ -97,8 +279,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2382,
-                "y": 513
+                "x": 1612,
+                "y": 1619
             }
         }
     },
@@ -109,8 +291,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3203,
-                "y": 808
+                "x": 1932,
+                "y": 1670
             }
         }
     },
@@ -120,8 +302,19 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 3484,
-                "y": 523
+                "x": 1612,
+                "y": 1391
+            }
+        }
+    },
+    "捉鬼任务": {
+        "next": [
+            "点击捉鬼任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 1046
             }
         }
     },
@@ -144,8 +337,135 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1586,
-                "y": 144
+                "x": 332,
+                "y": 467
+            }
+        }
+    },
+    "检查活动运镖是否存在": {
+        "next": [
+            "点击活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 1412
+            }
+        }
+    },
+    "点击战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "战.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始抓鬼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 1012
+            }
+        }
+    },
+    "点击战斗副本": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "战.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 500000,
+        "next": [
+            "开始第二轮抓鬼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4604,
+                "y": 1055
+            }
+        }
+    },
+    "点击押镖": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "押送普通镖"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "确定押镖",
+            "检查活动运镖是否存在"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 1309
+            }
+        }
+    },
+    "点击捉鬼任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "捉鬼任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 1029
+            }
+        }
+    },
+    "点击活动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    315,
+                    11,
+                    79,
+                    71
+                ],
+                "expected": [
+                    "活动"
+                ]
+            }
+        },
+        "next": [
+            "运镖活动"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 1380
             }
         }
     },
@@ -167,8 +487,52 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2195,
-                "y": 81
+                "x": 972,
+                "y": 255
+            }
+        }
+    },
+    "点击第二轮战斗": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "战.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开始第二轮抓鬼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3992,
+                "y": 1029
+            }
+        }
+    },
+    "点击第二轮捉鬼任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "捉鬼任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "点击第二轮战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3732,
+                "y": 1029
             }
         }
     },
@@ -192,39 +556,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1873,
-                "y": 87
-            }
-        }
-    },
-    "点开活动": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "roi": [
-                    301,
-                    43,
-                    72,
-                    68
-                ],
-                "expected": [
-                    "活动"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "找到运镖节点"
-        ],
-        "on_error": [
-            "退出"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 1591,
-                "y": 476
+                "x": 652,
+                "y": 255
             }
         }
     },
@@ -234,8 +567,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2133,
-                "y": 322
+                "x": 972,
+                "y": 570
             }
         }
     },
@@ -254,8 +587,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2589,
-                "y": -37
+                "x": 1292,
+                "y": 267
             }
         }
     },
@@ -273,12 +606,13 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2587,
-                "y": 214
+                "x": 1292,
+                "y": 12
             }
         }
     },
     "确定押镖": {
+        "max_hit": 3,
         "recognition": {
             "type": "OCR",
             "param": {
@@ -295,12 +629,61 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2634,
-                "y": 513
+                "x": 1932,
+                "y": 1357
             }
         }
     },
     "第一次押镖结束": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    984,
+                    381,
+                    193,
+                    38
+                ],
+                "expected": [
+                    "押送普通镖银"
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "点击押镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 1269
+            }
+        }
+    },
+    "第一轮结束": {
+        "next": [
+            "第二轮捉鬼任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3212,
+                "y": 1029
+            }
+        }
+    },
+    "第二轮抓鬼中": {
+        "post_delay": 5000,
+        "next": [
+            "开始第二轮抓鬼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4516,
+                "y": 1281
+            }
+        }
+    },
+    "第二轮抓鬼完成": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -313,13 +696,24 @@
             "type": "Click"
         },
         "next": [
-            "押送普通镖",
-            "押镖结束"
+            "抓鬼结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3200,
-                "y": 518
+                "x": 4504,
+                "y": 862
+            }
+        }
+    },
+    "第二轮捉鬼任务": {
+        "post_delay": 5000,
+        "next": [
+            "点击第二轮捉鬼任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3472,
+                "y": 1029
             }
         }
     },
@@ -329,8 +723,20 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1899,
-                "y": 312
+                "x": 652,
+                "y": 512
+            }
+        }
+    },
+    "等待抓鬼完成": {
+        "post_delay": 2000,
+        "next": [
+            "开始抓鬼"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 733
             }
         }
     },
@@ -342,8 +748,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2926,
-                "y": 513
+                "x": 2252,
+                "y": 1424
             }
         }
     },
@@ -353,44 +759,116 @@
         },
         "$__mpe_code": {
             "position": {
-                "x": 2873,
-                "y": 246
+                "x": 1612,
+                "y": 46
             }
         }
     },
     "运镖任务": {
         "next": [
-            "点开活动"
+            "打开地图"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1322,
-                "y": 469
+                "x": 12,
+                "y": 1724
             }
         }
     },
-    "退出": {
+    "运镖活动": {
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "OCR",
             "param": {
-                "template": [
-                    "x.png",
-                    "x2.png",
-                    "x3.png",
-                    "x4.png"
+                "expected": [
+                    "运镖"
+                ]
+            }
+        },
+        "next": [
+            "参加运镖"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 1396
+            }
+        }
+    },
+    "进入长安城": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "长安城"
                 ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "post_delay": 1000,
         "next": [
-            "点开活动"
+            "打开长安城地图"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 1909,
-                "y": 800
+                "x": 652,
+                "y": 1679
+            }
+        }
+    },
+    "长安城地图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    12,
+                    5,
+                    232,
+                    94
+                ],
+                "expected": [
+                    "长安城"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "寻找钟馗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 986
+            }
+        }
+    },
+    "飞长安城": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {
+                "roi": [
+                    592,
+                    396,
+                    47,
+                    38
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "长安城地图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 1029
             }
         }
     }
