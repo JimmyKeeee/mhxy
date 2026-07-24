@@ -6,7 +6,7 @@
     "license": "MIT",
     "welcome": "首次使用！欢迎使用 MAA!",
     "github": "https://github.com/JimmyKeeee/mhxy",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "controller": [
         {
             "name": "安卓端",
